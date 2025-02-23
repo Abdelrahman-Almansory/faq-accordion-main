@@ -32,7 +32,8 @@ img {
 /* Mobile first */
 
 body {
-  min-height: 100dvh;
+  /* min- */
+  height: 100dvh;
   background-color: var(--light-pink);
   display: flex;
   align-items: center;
