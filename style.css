@@ -1,0 +1,122 @@
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  /* Font weights */
+  --fw-sm: 400;
+  --fw-lg: 600;
+  --fw-xl: 700;
+}
+
+/* CSS Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Styling */
+/* Mobile first */
+
+body {
+  min-height: 100dvh;
+  background-color: var(--light-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  background-image: url("assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top top;
+  background-size: contain;
+  font-family: "Work Sans", serif;
+}
+
+.faq-container {
+  max-width: 600px;
+}
+
+.faq-container,
+.accordion-container,
+.accordion,
+.accordions-section {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-header {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: var(--fw-lg);
+}
+
+.faq-container {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.75rem;
+  font-weight: var(--fw-lg);
+  color: var(--dark-purple);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  color: var(--grayish-purple);
+  line-height: 1.5;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-content.open {
+  max-height: fit-content;
+}
+
+.icon {
+  content: url(assets/images/icon-plus.svg);
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.icon.minus {
+  content: url("assets/images/icon-minus.svg");
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+
+  main {
+    padding-top: 8rem;
+  }
+}
