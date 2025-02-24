@@ -89,7 +89,6 @@ hr {
 
 .accordion-header:hover {
   color: hsl(292, 82%, 35%);
-  cursor: pointer;
 }
 
 .accordion-content {
@@ -105,18 +104,21 @@ hr {
 }
 
 .icon {
-  content: url(assets/images/icon-plus.svg);
+  background-image: url(assets/images/icon-plus.svg);
+  background-color: var(--white);
+  border: none;
   background-repeat: no-repeat;
   height: 30px;
   width: 30px;
   cursor: pointer;
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .icon.minus {
-  content: url("assets/images/icon-minus.svg");
+  background-image: url("assets/images/icon-minus.svg");
 }
 
 @media (min-width: 800px) {
